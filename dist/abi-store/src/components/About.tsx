@@ -1,0 +1,60 @@
+export default function About() {
+  return (
+    <section id="rreth" className="py-20 sm:py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+        <div className="grid md:grid-cols-2 gap-14 lg:gap-24 items-center">
+          <div>
+            <div className="eyebrow mb-4">Rreth nesh</div>
+            <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.05] text-[#14251C]">
+              Familja jonë,
+              <span className="block italic font-normal text-[#2D7A4A]">në shërbim të familjes suaj.</span>
+            </h2>
+            <p className="text-[#5F6C64] text-[1.02rem] leading-relaxed mt-7">
+              Ne jemi një supermarket lokal që prej vitesh shërben komunitetin tonë. E njohim çdo klient, çdo preferencë, çdo nevojë.
+            </p>
+            <p className="text-[#5F6C64] text-[1.02rem] leading-relaxed mt-5">
+              Produktet tona vijnë nga fermerët dhe prodhuesit vendas — kjo do të thotë më shumë freski, më pak distancë dhe mbështetje për ekonominë tonë.
+            </p>
+
+            <div className="grid grid-cols-2 gap-x-8 gap-y-5 mt-10 pt-10 border-t hairline">
+              {[
+                "Produkte lokale",
+                "Freski e garantuar",
+                "Çmime të drejta",
+                "Ekip i dashur",
+                "Dërgesë në shtëpi",
+                "Orar i gjerë",
+              ].map((f) => (
+                <div key={f} className="flex items-start gap-3">
+                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#2D7A4A] flex-shrink-0" />
+                  <span className="text-[#14251C] font-medium text-[0.95rem]">{f}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative">
+            <div
+              className="aspect-[4/5] rounded-sm overflow-hidden shadow-2xl bg-center bg-cover"
+              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1534723452862-4c874018d66d?auto=format&fit=crop&w=1400&q=80')" }}
+            />
+            <div className="absolute -bottom-6 -left-6 sm:-left-10 bg-[#F5F1E8] border hairline px-6 py-4 shadow-xl">
+              <div className="eyebrow mb-1">Familje</div>
+              <div className="flex items-center gap-2">
+                <span className="font-[family-name:var(--font-playfair)] text-3xl text-[#14251C]">Lokale</span>
+                <span className="text-[#5F6C64] text-sm leading-tight">në shërbim të komunitetit</span>
+              </div>
+            </div>
+            <div className="absolute -top-6 -right-6 sm:-right-10 bg-[#2D7A4A] text-white px-6 py-4 shadow-xl">
+              <div className="eyebrow text-white/60 mb-1">Çdo ditë</div>
+              <div className="font-[family-name:var(--font-playfair)] text-2xl">
+                Freski e garantuar
+              </div>
+              <div className="text-white/70 text-xs mt-0.5">Produkte të kontrolluara</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

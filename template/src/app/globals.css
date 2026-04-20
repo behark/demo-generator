@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: {{COLOR_PRIMARY}};
+  --color-primary-dark: {{COLOR_PRIMARY_DARK}};
+  --color-secondary: {{COLOR_SECONDARY}};
+  --color-secondary-dark: {{COLOR_SECONDARY_DARK}};
+  --color-accent: {{COLOR_ACCENT}};
+  --color-ink: {{COLOR_INK}};
+  --color-muted: {{COLOR_MUTED}};
+  --color-cream: {{COLOR_CREAM}};
+  --color-warm: {{COLOR_WARM}};
+  --color-hairline: {{COLOR_HAIRLINE}};
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: {{BODY_BG}};
+  color: {{BODY_COLOR}};
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+section { scroll-margin-top: 5rem; }
+
+.eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: {{EYEBROW_COLOR}};
+}
+
+.hairline { border-color: {{COLOR_HAIRLINE}}; }
+
+@keyframes kenburns {
+  0%   { transform: scale(1.05) translate3d(0, 0, 0); }
+  100% { transform: scale(1.15) translate3d(-1.2%, -1.2%, 0); }
+}
+.kenburns { animation: kenburns 20s ease-in-out infinite alternate; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translate3d(0, 16px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+.fade-up { animation: fadeUp 900ms ease-out both; }
+.fade-up-1 { animation-delay: 80ms; }
+.fade-up-2 { animation-delay: 220ms; }
+.fade-up-3 { animation-delay: 360ms; }
+.fade-up-4 { animation-delay: 500ms; }
