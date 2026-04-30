@@ -21,8 +21,8 @@ export default function Footer() {
             <div className="eyebrow text-white/60 mb-4">Navigimi</div>
             <ul className="space-y-2.5 text-sm text-white/70">
               <li><a href="#sherbime" className="hover:text-[{{COLOR_PRIMARY}}] transition-colors">{{NAV_SERVICES}}</a></li>
-              <li><a href="#rreth" className="hover:text-[{{COLOR_PRIMARY}}] transition-colors">Rreth nesh</a></li>
-              <li><a href="#lokacion" className="hover:text-[{{COLOR_PRIMARY}}] transition-colors">Lokacion</a></li>
+              <li><a href="#rreth" className="hover:text-[{{COLOR_PRIMARY}}] transition-colors">Über uns</a></li>
+              <li><a href="#standort" className="hover:text-[{{COLOR_PRIMARY}}] transition-colors">Standort</a></li>
               <li><a href="#kontakt" className="hover:text-[{{COLOR_PRIMARY}}] transition-colors">Kontakt</a></li>
             </ul>
           </div>
@@ -45,11 +45,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="eyebrow text-white/60 mb-4">Orari</div>
+            <div className="eyebrow text-white/60 mb-4">Öffnungszeiten</div>
             <ul className="space-y-2.5 text-sm text-white/70 tabular-nums">
-              <li className="flex justify-between"><span>Hën – Pre</span><span>{{HOURS_WEEKDAY}}</span></li>
-              <li className="flex justify-between"><span>E shtunë</span><span>{{HOURS_SATURDAY}}</span></li>
-              <li className="flex justify-between"><span>E diel</span><span className="text-[{{COLOR_PRIMARY}}]">{{HOURS_SUNDAY}}</span></li>
+              <li className="flex justify-between"><span>Mo – Fr</span><span>{{HOURS_WEEKDAY}}</span></li>
+              <li className="flex justify-between"><span>Samstag</span><span>{{HOURS_SATURDAY}}</span></li>
+              <li className="flex justify-between"><span>Sonntag</span><span className="text-[{{COLOR_PRIMARY}}]">{{HOURS_SUNDAY}}</span></li>
             </ul>
           </div>
         </div>

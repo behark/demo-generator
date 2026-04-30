@@ -4,7 +4,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="grid md:grid-cols-2 gap-14 lg:gap-24 items-center">
           <div>
-            <div className="eyebrow mb-4">Rreth nesh</div>
+            <div className="eyebrow mb-4">Über uns</div>
             <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.05] text-[{{COLOR_INK}}]">
               {{ABOUT_TITLE_MAIN}},
               <span className="block italic font-normal text-[{{COLOR_PRIMARY}}]">{{ABOUT_TITLE_ITALIC}}</span>

@@ -51,14 +51,14 @@ export default function Contact() {
           </a>
 
           <a
-            href="#lokacion"
+            href="#standort"
             className="group bg-[{{CONTACT_BG}}] hover:bg-[{{CONTACT_HOVER_BG}}] transition-colors p-8 text-left"
           >
             <div className="eyebrow text-[{{COLOR_PRIMARY}}] mb-3">03</div>
-            <div className="font-[family-name:var(--font-playfair)] text-2xl mb-1">Vizito</div>
-            <div className="text-white/55 text-sm">Lokacioni ynë</div>
+            <div className="font-[family-name:var(--font-playfair)] text-2xl mb-1">Besuchen</div>
+            <div className="text-white/55 text-sm">Unser Standort</div>
             <div className="mt-5 text-xs uppercase tracking-[0.2em] text-white/40 group-hover:text-[{{COLOR_PRIMARY}}] transition-colors">
-              Hap hartën →
+              Karte öffnen →
             </div>
           </a>
         </div>

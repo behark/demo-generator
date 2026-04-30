@@ -14,13 +14,13 @@ export default function Booking() {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const lines = [
-      `*Rezervim i ri — {{BUSINESS_NAME}}*`,
+      `*Neue Reservierung — {{BUSINESS_NAME}}*`,
       ``,
-      `Emri: ${name}`,
-      `Telefoni: ${phone}`,
-      service ? `Shërbimi: ${service}` : null,
-      date ? `Data e preferuar: ${date}` : null,
-      note ? `Shënim: ${note}` : null,
+      `Name: ${name}`,
+      `Telefon: ${phone}`,
+      service ? `Service: ${service}` : null,
+      date ? `Bevorzugtes Datum: ${date}` : null,
+      note ? `Anmerkung: ${note}` : null,
     ].filter(Boolean).join("\n");
     const url = `https://wa.me/{{PHONE_INTL_DIGITS}}?text=${encodeURIComponent(lines)}`;
     window.open(url, "_blank", "noopener,noreferrer");
@@ -28,7 +28,7 @@ export default function Booking() {
 
   return (
     <section
-      id="rezervo"
+      id="reservierung"
       className="relative py-20 sm:py-32 bg-[{{COLOR_CREAM}}] overflow-hidden"
     >
       <div className="max-w-5xl mx-auto px-5 sm:px-8">
@@ -48,7 +48,7 @@ export default function Booking() {
               <svg className="w-5 h-5 text-[{{COLOR_PRIMARY}}] flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.76.46 3.41 1.27 4.84L2 22l5.33-1.39A9.9 9.9 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Z" />
               </svg>
-              <span>Rezervimi ju çon drejt në WhatsApp — ne ju konfirmojmë terminin shpejt.</span>
+              <span>Die Reservierung führt Sie direkt zu WhatsApp — wir bestätigen Ihren Termin schnell.</span>
             </div>
           </div>
 
@@ -58,30 +58,30 @@ export default function Booking() {
           >
             <div className="space-y-4">
               <div>
-                <label className="block text-[{{COLOR_INK}}] text-sm font-medium mb-1.5">Emri juaj</label>
+                <label className="block text-[{{COLOR_INK}}] text-sm font-medium mb-1.5">Ihr Name</label>
                 <input
                   type="text"
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="w-full px-4 py-3 border hairline rounded bg-white text-[{{COLOR_INK}}] focus:outline-none focus:border-[{{COLOR_PRIMARY}}] transition-colors"
-                  placeholder="Emri dhe mbiemri"
+                  placeholder="Vor- und Nachname"
                 />
               </div>
               <div>
-                <label className="block text-[{{COLOR_INK}}] text-sm font-medium mb-1.5">Telefoni</label>
+                <label className="block text-[{{COLOR_INK}}] text-sm font-medium mb-1.5">Telefon</label>
                 <input
                   type="tel"
                   required
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   className="w-full px-4 py-3 border hairline rounded bg-white text-[{{COLOR_INK}}] focus:outline-none focus:border-[{{COLOR_PRIMARY}}] transition-colors"
-                  placeholder="+383 __ ___ ___"
+                  placeholder="+43 ___ ___ __ __"
                 />
               </div>
               {SERVICES.length > 0 && (
                 <div>
-                  <label className="block text-[{{COLOR_INK}}] text-sm font-medium mb-1.5">Shërbimi</label>
+                  <label className="block text-[{{COLOR_INK}}] text-sm font-medium mb-1.5">Service</label>
                   <select
                     value={service}
                     onChange={(e) => setService(e.target.value)}
@@ -94,7 +94,7 @@ export default function Booking() {
                 </div>
               )}
               <div>
-                <label className="block text-[{{COLOR_INK}}] text-sm font-medium mb-1.5">Data e preferuar</label>
+                <label className="block text-[{{COLOR_INK}}] text-sm font-medium mb-1.5">Bevorzugtes Datum</label>
                 <input
                   type="date"
                   value={date}
@@ -103,13 +103,13 @@ export default function Booking() {
                 />
               </div>
               <div>
-                <label className="block text-[{{COLOR_INK}}] text-sm font-medium mb-1.5">Shënim (opsionale)</label>
+                <label className="block text-[{{COLOR_INK}}] text-sm font-medium mb-1.5">Anmerkung (optional)</label>
                 <textarea
                   value={note}
                   onChange={(e) => setNote(e.target.value)}
                   rows={2}
                   className="w-full px-4 py-3 border hairline rounded bg-white text-[{{COLOR_INK}}] focus:outline-none focus:border-[{{COLOR_PRIMARY}}] transition-colors resize-none"
-                  placeholder="Dicka që duhet të dimë?"
+                  placeholder="Etwas, das wir wissen sollten?"
                 />
               </div>
               <button

@@ -12,14 +12,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "{{BUSINESS_NAME}}",
     description: "{{OG_DESCRIPTION}}",
-    locale: "sq_AL",
+    locale: "de_AT",
     type: "website",
   },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="sq" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="de" className={`${inter.variable} ${playfair.variable}`}>
       <body className="antialiased">{children}</body>
     </html>
   );

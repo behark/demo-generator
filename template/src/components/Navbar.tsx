@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 
 const navLinks = [
   { href: "#sherbime", label: "{{NAV_SERVICES}}" },
-  { href: "#rezervo", label: "Rezervo" },
-  { href: "#rreth", label: "Rreth nesh" },
-  { href: "#lokacion", label: "Lokacion" },
+  { href: "#reservierung", label: "Reservierung" },
+  { href: "#rreth", label: "Über uns" },
+  { href: "#standort", label: "Standort" },
   { href: "#kontakt", label: "Kontakt" },
 ];
 

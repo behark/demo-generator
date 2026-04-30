@@ -44,7 +44,7 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-10 fade-up fade-up-4">
           <a
-            href="#rezervo"
+            href="#reservierung"
             className="group inline-flex items-center gap-2 bg-[{{COLOR_SECONDARY}}] text-[{{COLOR_ACCENT}}] font-medium px-7 py-3.5 rounded-full text-[0.95rem] tracking-wide transition-all hover:bg-white w-full sm:w-auto justify-center"
           >
             {{CTA_PRIMARY_LABEL}}
