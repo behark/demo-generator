@@ -6,34 +6,34 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <span className="inline-flex items-center justify-center w-9 h-9 bg-[{{COLOR_PRIMARY}}] text-white font-bold text-sm">
-                {{BUSINESS_INITIAL}}
+                {{ BUSINESS_INITIAL }}
               </span>
               <span className="font-[family-name:var(--font-playfair)] text-xl">
-                {{BUSINESS_NAME_MAIN}} <span className="italic opacity-80">{{BUSINESS_NAME_TAIL}}</span>
+                {{ BUSINESS_NAME_MAIN }} <span className="italic opacity-80">{{ BUSINESS_NAME_TAIL }}</span>
               </span>
             </div>
             <p className="text-white/55 text-sm leading-relaxed max-w-xs">
-              {{FOOTER_TAGLINE}}
+              {{ FOOTER_TAGLINE }}
             </p>
           </div>
 
           <div>
             <div className="eyebrow text-white/60 mb-4">Navigimi</div>
             <ul className="space-y-2.5 text-sm text-white/70">
-              <li><a href="#sherbime" className="hover:text-[{{COLOR_PRIMARY}}] transition-colors">{{NAV_SERVICES}}</a></li>
-              <li><a href="#rreth" className="hover:text-[{{COLOR_PRIMARY}}] transition-colors">Über uns</a></li>
-              <li><a href="#standort" className="hover:text-[{{COLOR_PRIMARY}}] transition-colors">Standort</a></li>
-              <li><a href="#kontakt" className="hover:text-[{{COLOR_PRIMARY}}] transition-colors">Kontakt</a></li>
+              <li><a href="#sherbime" className="hover:text-[{{COLOR_PRIMARY}}] transition-colors">{{ NAV_SERVICES }}</a></li>
+              <li><a href="#rreth" className="hover:text-[{{COLOR_PRIMARY}}] transition-colors">Rreth nesh</a></li>
+              <li><a href="#standort" className="hover:text-[{{COLOR_PRIMARY}}] transition-colors">Vendndodhja</a></li>
+              <li><a href="#kontakt" className="hover:text-[{{COLOR_PRIMARY}}] transition-colors">Kontakti</a></li>
             </ul>
           </div>
 
           <div>
-            <div className="eyebrow text-white/60 mb-4">Kontakt</div>
+            <div className="eyebrow text-white/60 mb-4">Kontakti</div>
             <ul className="space-y-2.5 text-sm text-white/70">
-              <li>{{CITY}}</li>
+              <li>{{ CITY }}</li>
               <li>
                 <a href="tel:+{{PHONE_INTL_DIGITS}}" className="hover:text-[{{COLOR_PRIMARY}}] transition-colors tabular-nums">
-                  {{PHONE_LOCAL}}
+                  {{ PHONE_LOCAL }}
                 </a>
               </li>
               <li>
@@ -45,17 +45,17 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="eyebrow text-white/60 mb-4">Öffnungszeiten</div>
+            <div className="eyebrow text-white/60 mb-4">Orari</div>
             <ul className="space-y-2.5 text-sm text-white/70 tabular-nums">
-              <li className="flex justify-between"><span>Mo – Fr</span><span>{{HOURS_WEEKDAY}}</span></li>
-              <li className="flex justify-between"><span>Samstag</span><span>{{HOURS_SATURDAY}}</span></li>
-              <li className="flex justify-between"><span>Sonntag</span><span className="text-[{{COLOR_PRIMARY}}]">{{HOURS_SUNDAY}}</span></li>
+              <li className="flex justify-between"><span>Hën – Pre</span><span>{{ HOURS_WEEKDAY }}</span></li>
+              <li className="flex justify-between"><span>Shtunë</span><span>{{ HOURS_SATURDAY }}</span></li>
+              <li className="flex justify-between"><span>Diel</span><span className="text-[{{COLOR_PRIMARY}}]">{{ HOURS_SUNDAY }}</span></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/10 mt-14 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-white/45">
-          <p>© {new Date().getFullYear()} {{BUSINESS_NAME}}. Të gjitha të drejtat e rezervuara.</p>
+          <p>© {new Date().getFullYear()} {{ BUSINESS_NAME }}. Të gjitha të drejtat e rezervuara.</p>
           <p>
             Dizajn & Zhvillim ·{" "}
             <a href="https://beharkabashi.com" target="_blank" rel="noopener noreferrer" className="text-[{{COLOR_PRIMARY}}] hover:underline">

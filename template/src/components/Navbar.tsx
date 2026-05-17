@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 
 const navLinks = [
   { href: "#sherbime", label: "{{NAV_SERVICES}}" },
-  { href: "#reservierung", label: "Reservierung" },
-  { href: "#rreth", label: "Über uns" },
-  { href: "#standort", label: "Standort" },
-  { href: "#kontakt", label: "Kontakt" },
+  { href: "#reservierung", label: "Rezervo" },
+  { href: "#rreth", label: "Rreth nesh" },
+  { href: "#standort", label: "Vendndodhja" },
+  { href: "#kontakt", label: "Kontakti" },
 ];
 
 export default function Navbar() {
@@ -22,29 +22,26 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
           ? "bg-[{{NAV_BG_SCROLLED}}]/95 backdrop-blur-md border-b hairline"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <a href="#home" className="flex items-center gap-3">
             <span
-              className={`inline-flex items-center justify-center w-9 h-9 rounded-full border ${
-                scrolled ? "border-[{{NAV_TEXT_SCROLLED}}]/25 text-[{{NAV_TEXT_SCROLLED}}]" : "border-white/30 text-white"
-              } font-[family-name:var(--font-playfair)] italic text-lg`}
+              className={`inline-flex items-center justify-center w-9 h-9 rounded-full border ${scrolled ? "border-[{{NAV_TEXT_SCROLLED}}]/25 text-[{{NAV_TEXT_SCROLLED}}]" : "border-white/30 text-white"
+                } font-[family-name:var(--font-playfair)] italic text-lg`}
             >
-              {{BUSINESS_INITIAL}}
+              {{ BUSINESS_INITIAL }}
             </span>
             <span
-              className={`font-[family-name:var(--font-playfair)] text-lg sm:text-xl tracking-tight ${
-                scrolled ? "text-[{{NAV_TEXT_SCROLLED}}]" : "text-white"
-              }`}
+              className={`font-[family-name:var(--font-playfair)] text-lg sm:text-xl tracking-tight ${scrolled ? "text-[{{NAV_TEXT_SCROLLED}}]" : "text-white"
+                }`}
             >
-              {{BUSINESS_NAME_MAIN}}
-              <span className="font-normal italic opacity-70"> {{BUSINESS_NAME_TAIL}}</span>
+              {{ BUSINESS_NAME_MAIN }}
+              <span className="font-normal italic opacity-70"> {{ BUSINESS_NAME_TAIL }}</span>
             </span>
           </a>
 
@@ -53,11 +50,10 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-[0.82rem] font-medium tracking-wide transition-colors ${
-                  scrolled
+                className={`text-[0.82rem] font-medium tracking-wide transition-colors ${scrolled
                     ? "text-[{{NAV_TEXT_SCROLLED}}]/75 hover:text-[{{COLOR_PRIMARY}}]"
                     : "text-white/85 hover:text-[{{COLOR_SECONDARY}}]"
-                }`}
+                  }`}
               >
                 {link.label}
               </a>
@@ -66,13 +62,12 @@ export default function Navbar() {
               href="https://wa.me/{{PHONE_INTL_DIGITS}}"
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-flex items-center gap-2 rounded-full text-[0.82rem] font-medium tracking-wide px-5 py-2.5 transition-all ${
-                scrolled
+              className={`inline-flex items-center gap-2 rounded-full text-[0.82rem] font-medium tracking-wide px-5 py-2.5 transition-all ${scrolled
                   ? "bg-[{{COLOR_PRIMARY}}] text-white hover:bg-[{{COLOR_PRIMARY_DARK}}]"
                   : "bg-white text-[{{NAV_TEXT_SCROLLED}}] hover:bg-[{{COLOR_SECONDARY}}]"
-              }`}
+                }`}
             >
-              {{CTA_PRIMARY_LABEL}}
+              {{ CTA_PRIMARY_LABEL }}
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
               </svg>
@@ -112,7 +107,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="mt-4 inline-flex items-center justify-center gap-2 w-full bg-[{{COLOR_PRIMARY}}] text-white font-medium rounded-full py-3.5"
             >
-              {{CTA_PRIMARY_LABEL}}
+              {{ CTA_PRIMARY_LABEL }}
             </a>
           </div>
         </div>

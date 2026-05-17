@@ -378,7 +378,7 @@ def substitute(text: str, tokens: dict) -> str:
     def replace(match):
         key = match.group(1)
         return str(tokens.get(key, match.group(0)))
-    return re.sub(r"\{\{([A-Z0-9_]+)\}\}", replace, text)
+    return re.sub(r"\{\{\s*([A-Z0-9_]+)\s*\}\}", replace, text)
 
 
 def copy_and_substitute(src: Path, dst: Path, tokens: dict) -> None:
